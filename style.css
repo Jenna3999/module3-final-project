@@ -350,6 +350,14 @@ FEATURES ↓
     align-items: center;
 }
 
+.section__tag {
+    font-size: 16px;
+    color: #6415ff;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .features {
     display: flex;
     flex-wrap: wrap;
