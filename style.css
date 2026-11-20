@@ -88,6 +88,11 @@ section {
     padding: 0 32px;
 }
 
+section {
+    display: block;
+    unicode-bidi: isolate;
+}
+
 main {
     margin-bottom: 96px;
 }
@@ -598,6 +603,19 @@ STEPS ↓
     letter-spacing: 0.025em;
 }
 
+.section__para {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1;
+    line-height: 1.625;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 32px;
+}
+
 .steps__description,
 .steps__img--wrapper {
     width: 50%;
@@ -613,12 +631,6 @@ STEPS ↓
     flex-direction: column;
     margin-left: 24px;
     max-width: 320px;
-}
-
-.step {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 32px;
 }
 
 .step__number {
@@ -665,9 +677,6 @@ STEPS ↓
     fill: #6415ff;
 }
 
-
-
-
 /* 
 
 VALUES ↓
@@ -679,6 +688,118 @@ VALUES ↓
     justify-content: space-between;
     align-items: center;
 }
+
+#values .btn {
+    margin-top: 48px;
+}
+
+.section__tag {
+    font-size: 16px;
+    color: #6415ff;
+    letter-spacing: 1.6px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.section__title {
+    font-size: 48px;
+    font-weight: 900;
+    color: #243e63;
+    line-height: 1.5;
+    margin: 16px 0;
+    letter-spacing: 0.025em;
+}
+
+.section__para {
+    font-size: 18px;
+    font-weight: 500;
+    color: #7c8ba1;
+    line-height: 1.625;
+}
+
+.values__description, 
+.values__img {
+    width: 50%;
+}
+
+.values__description {
+    padding: 32px 64px 32px 0;
+}
+
+.values__list {
+    margin-left: 0px;
+    margin-right: 0px;
+    display: flex;
+    max-width: none;
+    flex-direction: row;
+}
+
+.value {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.value:nth-of-type(1) {
+    margin-top: 32px;
+    margin-right: 32px;
+}
+
+.value:nth-child(1), 
+.value__img--wrapper {
+    background-color: #9ae6b4;
+}
+
+.value.value:nth-of-type(2) {
+    margin-top: 32px;
+}
+
+.value__title {
+    display: flex;
+    align-items: center;
+}
+
+.value__img--wrapper {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 36px;
+    height: 36px;
+}
+
+.value__img {
+    width: 20px;
+    height: 20px;
+}
+
+.value__name {
+    margin-left: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #243e63;
+}
+
+.value__para {
+    margin-top: 16px;
+    line-height: 1.625;
+    color: #718096;
+}
+
+.btn {
+    background-color: #6415ff;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 500px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    transition: all 300ms ease;
+    cursor: pointer;
+}
+
 
 
 /*
@@ -846,5 +967,71 @@ MOBILE RESPONSIVENESS ↓
         height: 5em;
         width: 5em;
         bottom: -50px;
+    }
+}
+
+@media(max-width: 768px) {
+    #quality .row, #values .row {
+        flex-direction: column-reverse;
+    }
+}
+
+@media(max-width: 768px) {
+    .quality__description, .quality__img--wrapper, .steps__description, .steps__img--wrapper, values__description, .values__img, .testimonials__description, .testimonials__img {
+        width: 100%;
+        max-width: 448px;
+    }
+}
+
+@media(max-width: 768px) {
+    .quality__description, .steps__description, .values__description, .testimonials__description {
+        padding: 0;
+        margin-top: 64px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 768px) {
+    .section__para {
+        font-size: 14px;
+    }
+}
+
+@media(max-width: 768px) {
+    .values__list {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media(max-width: 1024px) {
+    .values__list {
+        max-width: 20rem;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:1024px) {
+    .value {
+        margin-top: 2.5rem;
+    }
+}
+
+@media(max-width: 768px) {
+    .value {
+        margin-right: 0px;
+        align-items: center;
+    }
+}
+
+@media(max-width: 768px) {
+    .value:nth-of-type(1) {
+        margin-right: 0px;
+    }
+}
+
+@media(max-width: 640px) {
+    .btn {
+        line-height: 1.5;
     }
 }
